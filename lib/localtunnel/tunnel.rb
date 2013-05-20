@@ -54,6 +54,8 @@ class LocalTunnel::Tunnel
         end
       end
       puts "   Port #{port} is now publicly accessible from http://#{tunnel['host']} ..."
+      $stdout.flush
+      $stderr.flush
       begin
         sleep 1 while true
       rescue Interrupt
